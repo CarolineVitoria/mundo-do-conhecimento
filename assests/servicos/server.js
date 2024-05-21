@@ -39,7 +39,7 @@ connection.connect((err) => {
   });
 
 app.get('/', (req, res)=>{
-    res.status(200).send('Curso');
+    res.status(200).send('Api rodando');
 });
 
 app.post('/cadastro', (req, res)=>{
@@ -57,7 +57,7 @@ app.post('/cadastro', (req, res)=>{
         }
 })});
 
-// Rota para login de usuário
+// login de usuário
 app.post('/login', (req, res) => {
     console.log('Email recebido:', req.body.email);
     console.log('Senha recebida:', req.body.senha);
@@ -93,11 +93,11 @@ app.post('/notas', (req, res)=>{
 
     connection.query(q, [req.body.materia, req.body.autor, req.body.conteudo], (err)=>{
         if (err) {
-            console.error('Erro ao cadastrar usuário:', err);
-            res.status(500).json({ message: 'Erro ao cadastrar usuário' });
+            console.error('Erro ao cadastrar nota', err);
+            res.status(500).json({ message: 'Erro ao cadastrar nota' });
         } else {
-            console.log('Usuário cadastrado com sucesso');
-            res.status(200).json({ message: 'Usuário cadastrado com sucesso' });
+            console.log('nota cadastrada com sucesso');
+            res.status(200).json({ message: 'nota cadastrada com sucesso' });
         }
 })
 })
