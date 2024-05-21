@@ -1,4 +1,4 @@
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Aubrey&display=swap');@font-face {
     font-family: "avatar";
     src: url(../fonte/Avatar\ Airbender.ttf);
   }
@@ -44,7 +44,7 @@ input{
     height: 3rem;
     text-align: center;
     margin: 1rem auto 1rem auto;
-    font-family: 'avatar';
+    font-family: "Aubrey", system-ui;
     font-size: 1.8rem;
 }
 .btn {
